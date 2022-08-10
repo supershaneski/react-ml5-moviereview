@@ -46,6 +46,20 @@ function handleModelLoaded() {
 
 <br />
 
+# Screenshots
+
+Home screen.
+
+![Home page](public/image1.jpeg)
+
+<br />
+
+Sample user reviews from Movie page.
+
+![Movie page](public/image2.jpeg)
+
+<br />
+
 # Getting Started
 
 Clone the repository, install the dependencies and run
