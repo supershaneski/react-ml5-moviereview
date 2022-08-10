@@ -1,0 +1,110 @@
+.container {
+    background-color: #000;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+}
+.container * {
+    margin: 0;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+.fab {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #00b3e599;
+    border-radius: 50%;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.fab:hover {
+    background-color: #00b3e5;
+}
+.icon {
+    width: 50%;
+    height: 50%;
+}
+
+.main {
+    position: relative;
+    box-sizing: border-box;
+    height: calc(100% - 50px);
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.movie {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 60%;
+}
+.banner {
+    position: absolute;
+    left: 2em;
+    top: 4em;
+    width: 70%;
+}
+.titleDiv {
+    position: relative;
+}
+.title {
+    font-size: calc(10px + 7vmin); /*3.5em;*/
+}
+.descriptionDiv {
+    position: relative;
+    margin-bottom: 5px !important;
+}
+.descriptionDiv span {
+    margin-right: 10px !important;
+}
+.year {
+    font-weight: 550;
+}
+.rate {
+    color: #ccc;
+}
+.rate::before {
+    content: '\2605';
+    color: gold;
+    margin-right: 3px !important;
+}
+.overviewDiv {
+    position: relative;
+}
+.overview {
+    font-size: calc(5px + 2vmin); /*1.1em;*/
+    color: #ccc;
+}
+
+.reviewDiv {
+    position: relative;
+    margin-top: 2em !important;
+    padding: 0 1.5em 2em 1.5em;
+    box-sizing: border-box;
+}
+.reviewTitleDiv {
+    position: relative;
+}
+.reviewTitle {
+    font-size: 2em;
+    color: #fff;
+}
+.reviewContents {
+    position: relative;
+    margin-top: 1.5em !important;
+}

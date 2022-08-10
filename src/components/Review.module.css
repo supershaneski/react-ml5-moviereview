@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+}
+.review {
+    position: relative;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #999;
+}
+
+.review:last-child {
+    border-bottom: 0px;
+}
+.reviewHeader {
+    position: relative;
+    display: flex;
+    margin-bottom: 1em;
+}
+.author {
+    color: #67AEFF;
+    font-weight: 500;
+    margin-right: 2em;
+}
+.date {
+    margin-right: 2em;
+}
+.content {
+    position: relative;
+    width: 100%;
+}
+.content p {
+    position: relative;
+    width: 100%;
+    white-space: wrap;
+    margin-bottom: 1em;
+}

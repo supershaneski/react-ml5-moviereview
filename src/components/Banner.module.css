@@ -1,0 +1,18 @@
+.container {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #333;
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logo {
+    position: relative;
+    width: 75px;
+    margin-right: 0.5em !important;
+}
+.powerBy {
+    font-size: 0.8em;
+    margin-right: 1em !important;
+}
