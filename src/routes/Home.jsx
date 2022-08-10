@@ -4,10 +4,15 @@ import { useQuery } from '@tanstack/react-query'
 import { getTrending } from '../api/server'
 import classes from './Home.module.css'
 import Banner from '../components/Banner'
+import AppContext from '../lib/AppContext'
 
 export default function Home() {
 
     const navigate = useNavigate()
+
+    const appState = React.useContext(AppContext)
+
+    const divRef = React.useRef()
 
     const { isLoading, error, data } = useQuery(['trending'], getTrending, {
         staleTime: parseInt(import.meta.env.VITE_STALETIME),
@@ -15,7 +20,25 @@ export default function Home() {
         retry: 5,
     })
 
+    React.useEffect(() => {
+        
+        if(data?.results) {
+
+            let scroll = parseInt(appState.scroll)
+            if(scroll) {
+                if(scroll > 0 && divRef.current.scrollTop === 0) {
+                    divRef.current.scrollTop = scroll
+                }
+            }
+
+        }
+
+    }, [data])
+
     const handleSelect = (param) => () => {
+
+        appState.setScroll({ scroll: divRef.current.scrollTop })
+
         navigate(`/movie/${param.id}`, {
             state: {
                 ...param
@@ -28,7 +51,7 @@ export default function Home() {
             <div className={classes.header}>
                 <Banner />
             </div>
-            <div className={classes.main}>
+            <div ref={divRef} className={classes.main}>
                 <div className={classes.banner}>
                     <h1 className={classes.bannerTitle}>Trending</h1>
                 </div>
