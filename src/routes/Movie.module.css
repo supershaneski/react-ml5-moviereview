@@ -51,11 +51,15 @@
     background-position: center;
     position: relative;
     height: 70%;
+    display: flex;
+    align-items: center;
+}
+.inner {
+    position: relative;
 }
 .banner {
-    position: absolute;
-    left: 2em;
-    top: 4em;
+    position: relative;
+    margin-left: 2em;
     width: 70%;
 }
 .titleDiv {
@@ -102,7 +106,7 @@
     position: relative;
 }
 .reviewTitle {
-    font-size: 2em;
+    font-size: calc(3px + 5vmin); /*2em;*/
     color: #fff;
 }
 .reviewContents {

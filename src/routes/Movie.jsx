@@ -25,16 +25,18 @@ export default function Movie() {
                 <div className={classes.movie} style={{
                     backgroundImage: `url(${import.meta.env.VITE_TMDB_IMGURL}${state.backdrop_path})`
                 }}>
-                    <div className={classes.banner}>
-                        <div className={classes.titleDiv}>
-                            <h1 className={classes.title}>{state.title}</h1>
-                        </div>
-                        <div className={classes.descriptionDiv}>
-                            <span className={classes.year}>{getDateYear(state.release_date)}</span>
-                            <span className={classes.rate}>{getRate(state.vote_average)}</span>
-                        </div>
-                        <div className={classes.overviewDiv}>
-                            <p className={classes.overview}>{state.overview}</p>
+                    <div className={classes.inner}>
+                        <div className={classes.banner}>
+                            <div className={classes.titleDiv}>
+                                <h1 className={classes.title}>{state.title}</h1>
+                            </div>
+                            <div className={classes.descriptionDiv}>
+                                <span className={classes.year}>{getDateYear(state.release_date)}</span>
+                                <span className={classes.rate}>{getRate(state.vote_average)}</span>
+                            </div>
+                            <div className={classes.overviewDiv}>
+                                <p className={classes.overview}>{state.overview}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
