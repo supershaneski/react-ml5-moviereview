@@ -5,7 +5,7 @@
     position: relative;
     margin-bottom: 1.5em;
     padding-bottom: 1.5em;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px dotted #666;
 }
 
 .review:last-child {
@@ -33,4 +33,5 @@
     width: 100%;
     white-space: wrap;
     margin-bottom: 1em;
+    color: #AAA;
 }
