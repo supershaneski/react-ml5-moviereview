@@ -7,18 +7,18 @@ This React project is bootstrapped using [Vite](https://vitejs.dev/guide/).
 
 # Motivation
 
-This is an exercise to use `ml5`'s method [`Sentiment`](https://learn.ml5js.org/#/reference/sentiment) to predict whether or not a user review is favorable. This can be applied to user reviews submitted in a company website so that, in extreme case, they can pre-emptively take action before any untoward repercussion happens.
+This is an exercise to use `ml5`'s method [`Sentiment`](https://learn.ml5js.org/#/reference/sentiment) to predict whether or not a user review is favorable. A practical application would be to use a similar system to rate the comments/suggestions submitted in a company website to determine user sentiments and gives the company an opportunity to respond in a timely manner.
 
 I will be using [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction)(TMDb) API to get actual movie and movie reviews as an example. I will be checking the `favorable score` of the review. In actual project/app, it would be better to determine the score after submitting or editing the review.
 
-I will be using just the first page of movie trending list.
+I am just going to take the first page of movie trending list for the week.
 
 ```javascript
 https://api.themoviedb.org/3/trending/movie/week?api_key=${import.meta.env.VITE_TMDB_APIKEY_v3}
 ```
 
 For this example, there is no need to get any other details for each movie.
-I will just get the first page of reviews for the movie that the user selected.
+Also, only the first page of reviews for the movie that the user selected will be used.
 
 ```javascript
 https://api.themoviedb.org/3/movie/${movie_id}/reviews?api_key=${import.meta.env.VITE_TMDB_APIKEY_v3}&language=en-US&page=1
@@ -26,6 +26,7 @@ https://api.themoviedb.org/3/movie/${movie_id}/reviews?api_key=${import.meta.env
 
 You need to provide your own `TMDb` API key to make the URL work.
 Open the `.env` file and edit `VITE_TMDB_APIKEY_v3`.
+Please note that it is not advisable to put secret API keys in `.env` files for production.
 
 For server state management, I will be using [`react-query`](https://tanstack.com/query/v4) together with just plain `fetch` to make things simple. This will take care of caching our request so that we do not have to send request each time.
 
